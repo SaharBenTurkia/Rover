@@ -2,8 +2,8 @@ package Enumerations;
 
 public enum Instructions {
 
-	RIGHT('R', "Pivoter à droite"),
-    LEFT('L', "Pivoter à gauche"),
+	RIGHT('R', "Pivoter a droite"),
+    LEFT('L', "Pivoter a gauche"),
     MOVE('M', "Avancer");
 
     private String libelleInstruction;
