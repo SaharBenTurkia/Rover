@@ -41,16 +41,16 @@ public class ParseData {
 
 	// Return true if rover's informations are incorrect else false
 	public boolean executeParse() {
-		return parseMower(rover) && parsePlateau(plateau) && parseListInstruction(instructions);
+		return parseRover(rover) && parsePlateau(plateau) && parseListInstruction(instructions);
 	}
 
-	public static boolean parseMower(String mower) {
+	public static boolean parseRover(String rover) {
 		StringBuilder stringBuilder = new StringBuilder("");
 		stringBuilder.append(Orientation.NORTH.getCodeOrientation()).append("|")
 				.append(Orientation.SOUTH.getCodeOrientation()).append("|")
 				.append(Orientation.EAST.getCodeOrientation()).append("|")
 				.append(Orientation.WEST.getCodeOrientation());
-		return mower.matches("(\\d+) (\\d+) (" + stringBuilder.toString() + ")");
+		return rover.matches("(\\d+) (\\d+) (" + stringBuilder.toString() + ")");
 	}
 
 	public static boolean parseListInstruction(String instructions) {
